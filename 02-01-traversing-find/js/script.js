@@ -20,4 +20,15 @@ $(document).ready(function() {
 	result = $('#animals').children().first().children('.creature').first().next();
 	console.log(result);
 
+	// parent ()
+	result = $('#cat').parent();
+	console.log(result);
+
+	//parents()
+	result = $("#cat").parents('.category');
+	console.log(result);
+
+	//closest()
+	result = $("#cat").closest('.category');
+	console.log(result);
 });
