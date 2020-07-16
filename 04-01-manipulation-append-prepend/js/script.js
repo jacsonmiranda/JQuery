@@ -18,9 +18,16 @@ $(document).ready(function() {
 				$('#places-container').children().first().before(html);
 	});
 
-	$('#places-container .remove').on('click', function(){
-		$(this).parent().remove();
-		console.log($(this).parent());
-	});
+		//this only remove elements loaded on the page
+		//$('#places-container .remove').on('click', function(){
+		//	$(this).parent().remove();
+		//	console.log($(this).parent());
+		//});
+
+		//this also remove new elements
+		$('#places-container').on('click', '.remove', function(){
+			$(this).parent().remove();
+			console.log($(this).parent());
+		});
 
 });
