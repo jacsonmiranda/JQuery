@@ -31,6 +31,8 @@ $(document).ready(function() {
     $(this).closest('.item-box').find('.more-info').slideToggle();
   });
 
+  var cart = 0;
+
   $('body').on('click', '.item-box button', function(event){});
    event.preventDefault();
    var id = $(this).closest('.item-box').data('id');
@@ -43,5 +45,7 @@ $(document).ready(function() {
    })
    .done(function(response){
      console.log(response);
+     cart += response.price;
+     $('#total-cost').text('Total $' +cart);
    })
 });
